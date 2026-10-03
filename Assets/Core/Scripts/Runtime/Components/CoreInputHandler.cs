@@ -1,69 +1,43 @@
 using UnityEngine;
-using Unity.Netcode;
 using UnityEngine.InputSystem;
 
 namespace Blocks.Gameplay.Core
 {
     /// <summary>
-    /// Handles core player input using Unity's Input System and broadcasts actions via GameEvents.
-    /// This component handles core movement inputs (Move, Look, Jump, Sprint).
+    /// Handles local player input and raises events for movement, looking,
+    /// jumping, sprinting, primary actions, and menu input.
     /// </summary>
-    public class CoreInputHandler : NetworkBehaviour
+    public class CoreInputHandler : MonoBehaviour
     {
-        #region Fields
-
-        [Header("Core Game Events")]
-        [Tooltip("Raised when the player provides movement input.")]
+        [Header("Input Events")]
         [SerializeField] private Vector2Event onMoveInput;
-        [Tooltip("Raised when the player provides look/camera input.")]
         [SerializeField] private Vector2Event onLookInput;
-        [Tooltip("Raised when the jump button is pressed.")]
         [SerializeField] private GameEvent onJumpPressed;
-        [Tooltip("Raised when the jump button is released.")]
         [SerializeField] private GameEvent onJumpReleased;
-        [Tooltip("Raised when the sprint state changes (pressed or released).")]
         [SerializeField] private BoolEvent onSprintStateChanged;
-        [Tooltip("Raised when the primary action button is pressed.")]
-        [SerializeField] private GameEvent onPrimaryActionPressed;
-        [Tooltip("Raised when the primary action button is released.")]
-        [SerializeField] private GameEvent onPrimaryActionReleased;
-        [Tooltip("Raised when the menu button is pressed.")]
+        [SerializeField] private GameEvent onPrimaryPressed;
         [SerializeField] private GameEvent onMenuPressed;
 
         private GameplayInputSystem_Actions m_InputActions;
-
-        #endregion
-
-        #region Unity Lifecycle & Network Callbacks
 
         private void Awake()
         {
             m_InputActions = new GameplayInputSystem_Actions();
         }
 
-        public override void OnNetworkSpawn()
+        private void OnEnable()
         {
-            if (IsOwner && m_InputActions != null)
-            {
-                RegisterInputActions();
-                m_InputActions.Player.Enable();
-            }
+            RegisterInputEvents();
+            m_InputActions.Player.Enable();
         }
 
-        public override void OnNetworkDespawn()
+        private void OnDisable()
         {
-            if (IsOwner && m_InputActions != null)
-            {
-                m_InputActions.Player.Disable();
-                UnregisterInputActions();
-            }
+            UnregisterInputEvents();
+            m_InputActions.Player.Disable();
         }
 
-        #endregion
-
-        #region Input Registration
-
-        private void RegisterInputActions()
+        private void RegisterInputEvents()
         {
             m_InputActions.Player.Move.performed += HandleMove;
             m_InputActions.Player.Move.canceled += HandleMove;
@@ -74,17 +48,18 @@ namespace Blocks.Gameplay.Core
             m_InputActions.Player.Jump.performed += HandleJumpPressed;
             m_InputActions.Player.Jump.canceled += HandleJumpReleased;
 
-            m_InputActions.Player.Sprint.started += HandleSprintState;
-            m_InputActions.Player.Sprint.canceled += HandleSprintState;
+            m_InputActions.Player.Sprint.performed += HandleSprint;
+            m_InputActions.Player.Sprint.canceled += HandleSprint;
 
-            m_InputActions.Player.PrimaryAction.started += HandlePrimaryActionPressed;
-            m_InputActions.Player.PrimaryAction.canceled += HandlePrimaryActionReleased;
-
-            m_InputActions.Player.Menu.performed += HandleMenuPressed;
+            
+            m_InputActions.Player.Menu.performed += HandleMenu;
         }
 
-        private void UnregisterInputActions()
+        private void UnregisterInputEvents()
         {
+            if (m_InputActions == null)
+                return;
+
             m_InputActions.Player.Move.performed -= HandleMove;
             m_InputActions.Player.Move.canceled -= HandleMove;
 
@@ -94,28 +69,43 @@ namespace Blocks.Gameplay.Core
             m_InputActions.Player.Jump.performed -= HandleJumpPressed;
             m_InputActions.Player.Jump.canceled -= HandleJumpReleased;
 
-            m_InputActions.Player.Sprint.started -= HandleSprintState;
-            m_InputActions.Player.Sprint.canceled -= HandleSprintState;
+            m_InputActions.Player.Sprint.performed -= HandleSprint;
+            m_InputActions.Player.Sprint.canceled -= HandleSprint;
 
-            m_InputActions.Player.PrimaryAction.started -= HandlePrimaryActionPressed;
-            m_InputActions.Player.PrimaryAction.canceled -= HandlePrimaryActionReleased;
-
-            m_InputActions.Player.Menu.performed -= HandleMenuPressed;
+            
+            m_InputActions.Player.Menu.performed -= HandleMenu;
         }
 
-        #endregion
+        private void HandleMove(InputAction.CallbackContext context)
+        {
+            onMoveInput?.Raise(context.ReadValue<Vector2>());
+        }
 
-        #region Input Handlers
+        private void HandleLook(InputAction.CallbackContext context)
+        {
+            onLookInput?.Raise(context.ReadValue<Vector2>());
+        }
 
-        private void HandleMove(InputAction.CallbackContext context) => onMoveInput?.Raise(context.ReadValue<Vector2>());
-        private void HandleLook(InputAction.CallbackContext context) => onLookInput?.Raise(context.ReadValue<Vector2>());
-        private void HandleJumpPressed(InputAction.CallbackContext context) => onJumpPressed?.Raise();
-        private void HandleJumpReleased(InputAction.CallbackContext context) => onJumpReleased?.Raise();
-        private void HandleSprintState(InputAction.CallbackContext context) => onSprintStateChanged?.Raise(context.ReadValueAsButton());
-        private void HandlePrimaryActionPressed(InputAction.CallbackContext context) => onPrimaryActionPressed?.Raise();
-        private void HandlePrimaryActionReleased(InputAction.CallbackContext context) => onPrimaryActionReleased?.Raise();
-        private void HandleMenuPressed(InputAction.CallbackContext context) => onMenuPressed?.Raise();
+        private void HandleJumpPressed(InputAction.CallbackContext context)
+        {
+            onJumpPressed?.Raise();
+        }
 
-        #endregion
+        private void HandleJumpReleased(InputAction.CallbackContext context)
+        {
+            onJumpReleased?.Raise();
+        }
+
+        private void HandleSprint(InputAction.CallbackContext context)
+        {
+            onSprintStateChanged?.Raise(context.ReadValueAsButton());
+        }
+
+        
+
+        private void HandleMenu(InputAction.CallbackContext context)
+        {
+            onMenuPressed?.Raise();
+        }
     }
 }
