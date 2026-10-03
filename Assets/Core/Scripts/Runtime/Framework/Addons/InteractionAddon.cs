@@ -1,5 +1,4 @@
 using UnityEngine;
-using Unity.Netcode;
 using System.Collections.Generic;
 
 namespace Blocks.Gameplay.Core
@@ -9,7 +8,7 @@ namespace Blocks.Gameplay.Core
     /// It detects targets via raycast (look) and proximity (nearby), manages the "focus" state,
     /// and triggers interactions via input or collision.
     /// </summary>
-    public class InteractionAddon : NetworkBehaviour, IPlayerAddon
+    public class InteractionAddon : MonoBehaviour, IPlayerAddon
     {
         #region Fields & Properties
 
@@ -58,16 +57,9 @@ namespace Blocks.Gameplay.Core
         /// </summary>
         public void OnPlayerSpawn()
         {
-            if (m_PlayerManager.IsOwner)
-            {
-                m_MainCamera = Camera.main;
-                onInteractPressed.RegisterListener(TryInteract);
-                IsEnabled = true;
-            }
-            else
-            {
-                enabled = false;
-            }
+            m_MainCamera = Camera.main;
+            onInteractPressed.RegisterListener(TryInteract);
+            IsEnabled = true;
         }
 
         /// <summary>
@@ -75,11 +67,8 @@ namespace Blocks.Gameplay.Core
         /// </summary>
         public void OnPlayerDespawn()
         {
-            if (m_PlayerManager.IsOwner)
-            {
-                onInteractPressed.UnregisterListener(TryInteract);
-                ClearFocus();
-            }
+            onInteractPressed.UnregisterListener(TryInteract);
+            ClearFocus();
         }
 
         /// <summary>
@@ -92,7 +81,8 @@ namespace Blocks.Gameplay.Core
                 IsEnabled = false;
                 ClearFocus();
             }
-            else if (newState == PlayerLifeState.Respawned || newState == PlayerLifeState.InitialSpawn)
+            else if (newState == PlayerLifeState.Respawned ||
+                     newState == PlayerLifeState.InitialSpawn)
             {
                 IsEnabled = true;
                 m_CooldownTimer = 0f;
@@ -108,7 +98,10 @@ namespace Blocks.Gameplay.Core
         /// </summary>
         private void Update()
         {
-            if (!IsSpawned || !IsOwner || !IsEnabled) return;
+            if (!IsEnabled)
+            {
+                return;
+            }
 
             if (m_CooldownTimer > 0)
             {
@@ -124,11 +117,15 @@ namespace Blocks.Gameplay.Core
         /// </summary>
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
-            if (!IsSpawned || !IsOwner || !IsEnabled || m_CooldownTimer > 0) return;
+            if (!IsEnabled || m_CooldownTimer > 0)
+            {
+                return;
+            }
 
             if (hit.gameObject.TryGetComponent<IInteractable>(out var interactable))
             {
-                if (interactable.TriggerMode == InteractionTriggerMode.OnCharacterControllerHit && interactable.CanInteract(gameObject))
+                if (interactable.TriggerMode == InteractionTriggerMode.OnCharacterControllerHit &&
+                    interactable.CanInteract(gameObject))
                 {
                     interactable.Interact(gameObject);
                     m_CooldownTimer = interactionCooldown;
@@ -150,12 +147,18 @@ namespace Blocks.Gameplay.Core
         /// </summary>
         private void FindBestInteractable()
         {
-            if (m_MainCamera == null) return;
+            if (m_MainCamera == null)
+            {
+                m_MainCamera = Camera.main;
+            }
+
+            if (m_MainCamera == null)
+            {
+                return;
+            }
 
             var interactables = new List<IInteractable>();
 
-            // Physics-based trigger modes are handled by Unity's collision callbacks
-            // and should be excluded from the focus system to prevent duplicate interactions
             bool IsPhysicsBased(InteractionTriggerMode mode)
             {
                 return mode == InteractionTriggerMode.OnCharacterControllerHit ||
@@ -163,18 +166,30 @@ namespace Blocks.Gameplay.Core
                        mode == InteractionTriggerMode.OnRigidbodyCollision;
             }
 
-            if (Physics.Raycast(m_MainCamera.transform.position, m_MainCamera.transform.forward, out var hit, raycastDistance, interactionLayer))
+            if (Physics.Raycast(
+                    m_MainCamera.transform.position,
+                    m_MainCamera.transform.forward,
+                    out var hit,
+                    raycastDistance,
+                    interactionLayer))
             {
-                if (hit.collider.TryGetComponent<IInteractable>(out var raycastTarget) && !IsPhysicsBased(raycastTarget.TriggerMode))
+                if (hit.collider.TryGetComponent<IInteractable>(out var raycastTarget) &&
+                    !IsPhysicsBased(raycastTarget.TriggerMode))
                 {
                     interactables.Add(raycastTarget);
                 }
             }
 
-            int hitCount = Physics.OverlapSphereNonAlloc(transform.position, proximityRadius, m_ProximityColliders, interactionLayer);
+            int hitCount = Physics.OverlapSphereNonAlloc(
+                transform.position,
+                proximityRadius,
+                m_ProximityColliders,
+                interactionLayer);
+
             for (int i = 0; i < hitCount; i++)
             {
                 var col = m_ProximityColliders[i];
+
                 if (col.TryGetComponent<IInteractable>(out var proximityTarget) &&
                     !interactables.Contains(proximityTarget) &&
                     !IsPhysicsBased(proximityTarget.TriggerMode))
@@ -204,8 +219,8 @@ namespace Blocks.Gameplay.Core
             {
                 m_CurrentFocusedInteractable = bestTarget;
 
-                // Automatically interact when entering focus for OnFocusEnter trigger mode
-                if (m_CurrentFocusedInteractable != null && m_CurrentFocusedInteractable.TriggerMode == InteractionTriggerMode.OnFocusEnter)
+                if (m_CurrentFocusedInteractable != null &&
+                    m_CurrentFocusedInteractable.TriggerMode == InteractionTriggerMode.OnFocusEnter)
                 {
                     m_CurrentFocusedInteractable.Interact(gameObject);
                 }
@@ -217,7 +232,12 @@ namespace Blocks.Gameplay.Core
         /// </summary>
         private void TryInteract()
         {
-            if (!IsEnabled || m_CooldownTimer > 0 || m_CurrentFocusedInteractable == null) return;
+            if (!IsEnabled ||
+                m_CooldownTimer > 0 ||
+                m_CurrentFocusedInteractable == null)
+            {
+                return;
+            }
 
             if (m_CurrentFocusedInteractable.TriggerMode == InteractionTriggerMode.OnButtonPress &&
                 m_CurrentFocusedInteractable.CanInteract(gameObject))
