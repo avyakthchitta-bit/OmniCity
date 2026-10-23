@@ -166,35 +166,50 @@ namespace Blocks.Gameplay.Core
 
         private void HandleJump()
         {
-            if (!m_IsMovementInputEnabled)
-                return;
-
             if (coreMovement == null)
             {
-                Debug.LogWarning(
-                    "[CorePlayerManager] coreMovement is null in HandleJump");
+                Debug.LogWarning("[Jump Debug] CoreMovement is null.");
+                return;
+            }
+
+            Debug.Log(
+                $"[Jump Debug] Input received. Grounded: {coreMovement.IsGrounded}");
+
+            if (!m_IsMovementInputEnabled)
+            {
+                Debug.Log("[Jump Debug] Movement input disabled.");
                 return;
             }
 
             if (!coreMovement.IsGrounded)
+            {
+                Debug.Log("[Jump Debug] Rejected: not grounded.");
                 return;
+            }
 
             if (coreStats == null)
             {
-                Debug.LogWarning(
-                    "[CorePlayerManager] coreStats is null in HandleJump");
+                Debug.LogWarning("[Jump Debug] CoreStats is null.");
                 return;
             }
 
             float jumpStaminaCost =
-                CoreMovement.GetAbilityStaminaCost<JumpAbility>();
+                coreMovement.GetAbilityStaminaCost<JumpAbility>();
+
+            Debug.Log($"[Jump Debug] Jump cost: {jumpStaminaCost}");
 
             if (coreStats.TryConsumeStat(
                 StatKeys.Stamina,
                 jumpStaminaCost,
                 0))
             {
+                Debug.Log("[Jump Debug] Calling PerformJump().");
                 coreMovement.PerformJump();
+            }
+            else
+            {
+                Debug.LogWarning(
+                    "[Jump Debug] Stamina consumption failed.");
             }
         }
 
@@ -390,7 +405,7 @@ namespace Blocks.Gameplay.Core
                 return;
 
             float staminaToConsume =
-                CoreMovement.GetAbilityStaminaCost<WalkAbility>() *
+                coreMovement.GetAbilityStaminaCost<WalkAbility>() *
                 Time.deltaTime;
 
             if (!coreStats.TryConsumeStat(

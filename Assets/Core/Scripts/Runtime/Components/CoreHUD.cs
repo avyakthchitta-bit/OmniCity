@@ -1,5 +1,4 @@
 using UnityEngine;
-using Unity.Netcode;
 using System.Collections;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
@@ -9,10 +8,9 @@ namespace Blocks.Gameplay.Core
     /// <summary>
     /// Manages the player's heads-up display (HUD) using Unity's UI Toolkit.
     /// This component handles health/stamina bars, notifications, respawn overlays, and player status updates.
-    /// Only active for the local player (owner).
     /// </summary>
     [RequireComponent(typeof(UIDocument))]
-    public class CoreHUD : NetworkBehaviour
+    public class CoreHUD : MonoBehaviour
     {
         #region Fields & Properties
 
@@ -64,19 +62,10 @@ namespace Blocks.Gameplay.Core
 
         #endregion
 
-        #region Unity & Network Lifecycle
+        #region Unity Lifecycle
 
-        /// <summary>
-        /// Handles network spawn initialization for the local player's HUD.
-        /// </summary>
-        public override void OnNetworkSpawn()
+        private void Start()
         {
-            if (!IsOwner)
-            {
-                DisableForNonOwner();
-                return;
-            }
-
             if (!ValidateComponents()) return;
 
             CreateHUD();
@@ -86,23 +75,17 @@ namespace Blocks.Gameplay.Core
         }
 
         /// <summary>
-        /// Called during OnNetworkSpawn to allow derived classes to perform additional initialization.
+        /// Called during Start to allow derived classes to perform additional initialization.
         /// </summary>
         protected virtual void Initialize()
         {
             // Override in derived classes for additional initialization
         }
 
-        /// <summary>
-        /// Handles cleanup when the network object is despawned.
-        /// </summary>
-        public override void OnNetworkDespawn()
+        private void OnDestroy()
         {
-            if (IsOwner)
-            {
-                UnregisterEventListeners();
-                ClearAllNotifications();
-            }
+            UnregisterEventListeners();
+            ClearAllNotifications();
         }
 
         #endregion
@@ -157,7 +140,7 @@ namespace Blocks.Gameplay.Core
         /// <param name="payload">The respawn status payload.</param>
         private void HandleRespawnStatusChanged(RespawnStatusPayload payload)
         {
-            if (payload.playerId != OwnerClientId) return;
+            if (payload.playerId != 0) return;
 
             var divider = m_MessageOverlay?.Q<VisualElement>("message-divider");
 
@@ -204,15 +187,9 @@ namespace Blocks.Gameplay.Core
             // Handle elimination notifications
             ProcessEliminationNotification(payload);
 
-            // Process networked stat changes (available to all clients)
             HandleStatChangedNetworked(payload);
-
-            // Process local player stat changes
-            if (payload.targetPlayerId == OwnerClientId)
-            {
-                UpdateLocalPlayerStats(payload);
-                HandleStatChangedLocal(payload);
-            }
+            UpdateLocalPlayerStats(payload);
+            HandleStatChangedLocal(payload);
         }
 
         /// <summary>
@@ -441,18 +418,6 @@ namespace Blocks.Gameplay.Core
         }
 
         /// <summary>
-        /// Disables the HUD for non-owner clients.
-        /// </summary>
-        private void DisableForNonOwner()
-        {
-            if (TryGetComponent<UIDocument>(out var uiDoc))
-            {
-                uiDoc.enabled = false;
-            }
-            enabled = false;
-        }
-
-        /// <summary>
         /// Coroutine that performs initial HUD updates after spawn.
         /// </summary>
         /// <returns>IEnumerator for coroutine execution.</returns>
@@ -466,7 +431,9 @@ namespace Blocks.Gameplay.Core
                 {
                     HandleStatChanged(new StatChangePayload
                     {
+                        targetPlayerId = 0,
                         statName = stat.name,
+                        statID = Animator.StringToHash(stat.name),
                         currentValue = stat.current,
                         maxValue = stat.max
                     });
@@ -524,18 +491,26 @@ namespace Blocks.Gameplay.Core
         /// <returns>The player's display name or a fallback format.</returns>
         private string GetPlayerName(ulong playerId)
         {
-            if (NetworkManager.Singleton != null && NetworkManager.Singleton.SpawnManager != null)
+            if (TryGetComponent<CorePlayerState>(out var localState))
             {
-                var playerObject = NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(playerId);
-                if (playerObject != null && playerObject.TryGetComponent<CorePlayerState>(out var playerState))
+                string playerName = localState.PlayerName;
+                if (!string.IsNullOrEmpty(playerName))
                 {
-                    string playerName = playerState.PlayerName;
-                    if (!string.IsNullOrEmpty(playerName))
-                    {
-                        return playerName;
-                    }
+                    return playerName;
                 }
             }
+
+            if (GameManager.Instance != null)
+            {
+                var localPlayer = GameManager.Instance.GetLocalPlayer();
+                if (localPlayer != null &&
+                    localPlayer.TryGetComponent<CorePlayerState>(out var playerState) &&
+                    !string.IsNullOrEmpty(playerState.PlayerName))
+                {
+                    return playerState.PlayerName;
+                }
+            }
+
             return $"Player-{playerId}";
         }
 
