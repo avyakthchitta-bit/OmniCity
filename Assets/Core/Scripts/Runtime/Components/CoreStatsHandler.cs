@@ -1,5 +1,4 @@
 using UnityEngine;
-using Unity.Netcode;
 using System.Collections.Generic;
 
 namespace Blocks.Gameplay.Core
@@ -7,11 +6,8 @@ namespace Blocks.Gameplay.Core
     /// <summary>
     /// Manages a character's stats (e.g., Health, Stamina) based on a <see cref="StatsConfig"/> asset.
     /// It handles stat initialization, modification, consumption, and regeneration.
-    /// Stats are synchronized over the network using a <see cref="NetworkList{T}"/>.
-    /// It also determines the "alive" state of the character based on a designated primary stat (e.g., Health).
     /// </summary>
-    [RequireComponent(typeof(NetworkObject))]
-    public class CoreStatsHandler : NetworkBehaviour
+    public class CoreStatsHandler : MonoBehaviour
     {
         #region Fields & Properties
 
@@ -31,8 +27,7 @@ namespace Blocks.Gameplay.Core
         /// </summary>
         public bool IsAlive { get; private set; } = true;
 
-        // Networked list that synchronizes stat values across all clients
-        private NetworkList<RuntimeStat> m_RuntimeStats;
+        private readonly List<RuntimeStat> m_RuntimeStats = new List<RuntimeStat>();
 
         // Tracks the last time each stat was consumed to enforce regeneration delays
         private readonly Dictionary<int, float> m_LastStatUseTime = new Dictionary<int, float>();
@@ -42,7 +37,7 @@ namespace Blocks.Gameplay.Core
 
         #endregion
 
-        #region Unity & Network Lifecycle
+        #region Unity Lifecycle
 
         private void Awake()
         {
@@ -53,64 +48,26 @@ namespace Blocks.Gameplay.Core
                 return;
             }
 
-            // Owner can write, everyone can read the stat values
-            m_RuntimeStats = new NetworkList<RuntimeStat>(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
-
-            // Populate the definitions dictionary from the config for fast lookups
             foreach (var def in statsConfig.stats)
             {
                 m_StatDefinitions[Animator.StringToHash(def.statName)] = def;
             }
+
+            InitializeRuntimeStats();
+            UpdateAliveState();
         }
 
-        public override void OnNetworkSpawn()
+        private void Start()
         {
-            if (IsOwner)
-            {
-                // The owner is responsible for initializing the stats for their character
-                // This ensures that stats are set only once and then synchronized to other clients
-                if (m_RuntimeStats.Count == 0)
-                {
-                    if (statsConfig.stats == null || statsConfig.stats.Count == 0)
-                    {
-                        Debug.LogWarning($"[CoreStatsHandler] No stats defined in StatsConfig on {gameObject.name}", this);
-                        return;
-                    }
-
-                    foreach (var def in statsConfig.stats)
-                    {
-                        m_RuntimeStats.Add(new RuntimeStat
-                        {
-                            StatHash = Animator.StringToHash(def.statName),
-                            CurrentValue = def.startingValue
-                        });
-                    }
-                }
-            }
-
-            // Subscribe to changes in the stat list to update UI and game logic
-            m_RuntimeStats.OnListChanged += OnStatsListChanged;
-
-            // Broadcast the initial state of all stats for late-joining clients or initialization
             foreach (var stat in m_RuntimeStats)
             {
                 BroadcastStatChange(stat);
             }
-
-            // Set the initial alive state
-            UpdateAliveState();
-        }
-
-        public override void OnNetworkDespawn()
-        {
-            // Unsubscribe to prevent memory leaks
-            m_RuntimeStats.OnListChanged -= OnStatsListChanged;
         }
 
         private void Update()
         {
-            // Regeneration logic is only handled by the owner
-            if (!IsOwner || !IsAlive) return;
+            if (!IsAlive) return;
 
             HandleRegeneration();
         }
@@ -120,7 +77,7 @@ namespace Blocks.Gameplay.Core
         #region Public Methods
 
         /// <summary>
-        /// Modifies a stat by a given amount. Only the owner can call this.
+        /// Modifies a stat by a given amount.
         /// </summary>
         /// <param name="statHash">The hash of the stat to modify (use StatKeys).</param>
         /// <param name="amount">The amount to add or subtract.</param>
@@ -128,8 +85,6 @@ namespace Blocks.Gameplay.Core
         /// <param name="sourceType">What type of modification this is.</param>
         public void ModifyStat(int statHash, float amount, ulong sourcePlayerId = 0, ModificationSource sourceType = ModificationSource.Direct)
         {
-            if (!IsOwner) return;
-
             int statIndex = FindStatIndex(statHash);
 
             if (statIndex != -1)
@@ -151,14 +106,17 @@ namespace Blocks.Gameplay.Core
         /// <returns>True if the stat had enough value to consume, false otherwise.</returns>
         public bool TryConsumeStat(int statHash, float amount, ulong sourcePlayerId = 0)
         {
-            if (!IsOwner) return false;
-
             int statIndex = FindStatIndex(statHash);
 
             if (statIndex == -1)
             {
                 Debug.LogWarning($"[CoreStatsHandler] TryConsumeStat failed: Stat with hash {statHash} not found on {gameObject.name}", this);
                 return false;
+            }
+
+            if (amount <= 0f)
+            {
+                return true;
             }
 
             if (m_RuntimeStats[statIndex].CurrentValue >= amount)
@@ -233,15 +191,24 @@ namespace Blocks.Gameplay.Core
 
         #region Private Methods
 
-        /// <summary>
-        /// Called when the NetworkList of stats changes. This can be an add, remove, or value change.
-        /// Runs on all clients when the owner modifies a stat value.
-        /// </summary>
-        private void OnStatsListChanged(NetworkListEvent<RuntimeStat> changeEvent)
+        private void InitializeRuntimeStats()
         {
-            UpdateAliveState();
-            var stat = changeEvent.Value;
-            BroadcastStatChange(stat, stat.SourcePlayerId, stat.SourceType);
+            m_RuntimeStats.Clear();
+
+            if (statsConfig.stats == null || statsConfig.stats.Count == 0)
+            {
+                Debug.LogWarning($"[CoreStatsHandler] No stats defined in StatsConfig on {gameObject.name}", this);
+                return;
+            }
+
+            foreach (var def in statsConfig.stats)
+            {
+                m_RuntimeStats.Add(new RuntimeStat
+                {
+                    StatHash = Animator.StringToHash(def.statName),
+                    CurrentValue = def.startingValue
+                });
+            }
         }
 
         /// <summary>
@@ -249,7 +216,7 @@ namespace Blocks.Gameplay.Core
         /// </summary>
         private void HandleRegeneration()
         {
-            if (m_RuntimeStats == null || m_RuntimeStats.Count == 0)
+            if (m_RuntimeStats.Count == 0)
             {
                 return;
             }
@@ -261,11 +228,9 @@ namespace Blocks.Gameplay.Core
                 {
                     if (def.regenRate > 0 && stat.CurrentValue < def.maxValue)
                     {
-                        // Only regenerate if the stat has never been used or enough time has passed since last consumption
                         if (!m_LastStatUseTime.ContainsKey(stat.StatHash) ||
                             Time.time - m_LastStatUseTime[stat.StatHash] > def.regenDelay)
                         {
-                            // Don't record use time for regeneration to avoid resetting the delay
                             ModifyStat(i, def.regenRate * Time.deltaTime, false, 0, ModificationSource.Regeneration);
                         }
                     }
@@ -275,19 +240,27 @@ namespace Blocks.Gameplay.Core
 
         /// <summary>
         /// Updates the character's alive state based on the primary stat.
-        /// Runs on all clients whenever stats change.
         /// </summary>
         private void UpdateAliveState()
         {
-            var primaryStatValue = GetCurrentValue(statsConfig.PrimaryStatHash);
-            IsAlive = primaryStatValue > 0;
+            if (statsConfig == null)
+            {
+                IsAlive = true;
+                return;
+            }
+
+            int index = FindStatIndex(statsConfig.PrimaryStatHash);
+            if (index == -1)
+            {
+                IsAlive = true;
+                return;
+            }
+
+            IsAlive = m_RuntimeStats[index].CurrentValue > 0;
         }
 
         /// <summary>
         /// Raises the appropriate events with a payload containing the updated stat information.
-        /// This runs on all clients when the NetworkList updates, not just the owner.
-        /// Use the OwnerClientId in the payload to identify which player the stat change belongs to.
-        /// For local player updates, listeners can filter using IsOwner.
         /// </summary>
         /// <param name="stat">The stat that has changed.</param>
         /// <param name="sourcePlayerId">The player who caused this stat change.</param>
@@ -300,7 +273,7 @@ namespace Blocks.Gameplay.Core
                 {
                     var statPayload = new StatChangePayload
                     {
-                        targetPlayerId = OwnerClientId,
+                        targetPlayerId = 0,
                         sourcePlayerId = sourcePlayerId,
                         sourceType = sourceType,
                         statName = def.statName,
@@ -317,7 +290,7 @@ namespace Blocks.Gameplay.Core
                     {
                         var depletedPayload = new StatDepletedPayload
                         {
-                            playerId = OwnerClientId,
+                            playerId = 0,
                             statName = def.statName,
                             statID = stat.StatHash
                         };
@@ -332,10 +305,10 @@ namespace Blocks.Gameplay.Core
         }
 
         /// <summary>
-        /// Internal method to modify a stat by its index in the NetworkList.
-        /// Clamps the value to the stat's min and max values and triggers network synchronization.
+        /// Internal method to modify a stat by its index.
+        /// Clamps the value to the stat's min and max values.
         /// </summary>
-        /// <param name="index">The index of the stat in the NetworkList.</param>
+        /// <param name="index">The index of the stat.</param>
         /// <param name="amount">The amount to add or subtract.</param>
         /// <param name="recordUseTime">Whether to record the use time for regeneration delay tracking.</param>
         /// <param name="sourcePlayerId">The player who caused this change.</param>
@@ -355,14 +328,15 @@ namespace Blocks.Gameplay.Core
                 stat.SourcePlayerId = sourcePlayerId;
                 stat.SourceType = sourceType;
 
-                // Assignment to NetworkList triggers network synchronization to all clients
                 m_RuntimeStats[index] = stat;
 
-                // Record use time only for consumption to enforce regeneration delays
                 if (recordUseTime && amount < 0)
                 {
                     m_LastStatUseTime[stat.StatHash] = Time.time;
                 }
+
+                UpdateAliveState();
+                BroadcastStatChange(stat, sourcePlayerId, sourceType);
             }
             else
             {
@@ -371,7 +345,7 @@ namespace Blocks.Gameplay.Core
         }
 
         /// <summary>
-        /// Finds the index of a stat in the NetworkList using its hash.
+        /// Finds the index of a stat using its hash.
         /// </summary>
         /// <param name="statHash">The hash of the stat to find.</param>
         /// <returns>The index of the stat, or -1 if not found.</returns>
