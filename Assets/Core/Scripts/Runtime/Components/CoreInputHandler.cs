@@ -1,12 +1,9 @@
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Blocks.Gameplay.Core
 {
-    /// <summary>
-    /// Handles local player input and raises events for movement, looking,
-    /// jumping, sprinting, primary actions, and menu input.
-    /// </summary>
     public class CoreInputHandler : MonoBehaviour
     {
         [Header("Input Events")]
@@ -18,11 +15,17 @@ namespace Blocks.Gameplay.Core
         [SerializeField] private GameEvent onPrimaryPressed;
         [SerializeField] private GameEvent onMenuPressed;
 
+        [Header("Dash")]
+        [SerializeField] private CoreMovement coreMovement;
+
         private GameplayInputSystem_Actions m_InputActions;
 
         private void Awake()
         {
             m_InputActions = new GameplayInputSystem_Actions();
+
+            if (coreMovement == null)
+                coreMovement = GetComponent<CoreMovement>();
         }
 
         private void OnEnable()
@@ -48,10 +51,11 @@ namespace Blocks.Gameplay.Core
             m_InputActions.Player.Jump.performed += HandleJumpPressed;
             m_InputActions.Player.Jump.canceled += HandleJumpReleased;
 
+            m_InputActions.Player.Dash.performed += HandleDash;
+
             m_InputActions.Player.Sprint.performed += HandleSprint;
             m_InputActions.Player.Sprint.canceled += HandleSprint;
 
-            
             m_InputActions.Player.Menu.performed += HandleMenu;
         }
 
@@ -69,10 +73,11 @@ namespace Blocks.Gameplay.Core
             m_InputActions.Player.Jump.performed -= HandleJumpPressed;
             m_InputActions.Player.Jump.canceled -= HandleJumpReleased;
 
+            m_InputActions.Player.Dash.performed -= HandleDash;
+
             m_InputActions.Player.Sprint.performed -= HandleSprint;
             m_InputActions.Player.Sprint.canceled -= HandleSprint;
 
-            
             m_InputActions.Player.Menu.performed -= HandleMenu;
         }
 
@@ -96,12 +101,26 @@ namespace Blocks.Gameplay.Core
             onJumpReleased?.Raise();
         }
 
+        private void HandleDash(InputAction.CallbackContext context)
+        {
+            Debug.Log("[Dash] Ctrl input received.");
+
+            if (coreMovement == null)
+            {
+                Debug.LogWarning("[Dash] CoreMovement not found.");
+                return;
+            }
+
+            if (!coreMovement.TryActivateAbility<DashAbility>())
+            {
+                Debug.LogWarning("[Dash] Ability activation failed.");
+            }
+        }
+
         private void HandleSprint(InputAction.CallbackContext context)
         {
             onSprintStateChanged?.Raise(context.ReadValueAsButton());
         }
-
-        
 
         private void HandleMenu(InputAction.CallbackContext context)
         {

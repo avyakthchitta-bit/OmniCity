@@ -460,7 +460,7 @@ namespace Blocks.Gameplay.Core
             Vector3 movement =
                 finalModifier.ArealVelocity;
 
-            movement.y = m_VerticalVelocity;
+            movement.y = m_VerticalVelocity + m_ExternalForce.y;
 
             IsOnSlope = OnSlope();
 
