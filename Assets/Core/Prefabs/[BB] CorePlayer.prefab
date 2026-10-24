@@ -71,7 +71,7 @@ CharacterController:
   serializedVersion: 3
   m_Height: 1.8
   m_Radius: 0.28
-  m_SlopeLimit: 45
+  m_SlopeLimit: 75
   m_StepOffset: 0.25
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1777126326
+  GlobalObjectIdHash: 3365733114
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -379,8 +379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75c8626b1bb312642a3fc5dd65dc3b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Blocks.Gameplay.Core::Blocks.Gameplay.Core.DashAbility
-  dashForce: 96
-  dashCooldown: 0
+  dashForce: 75
+  dashCooldown: 0.25
   staminaCost: 15
 --- !u!114 &8490301362386235323
 MonoBehaviour:
@@ -418,8 +418,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Blocks.Gameplay.Platformer::Blocks.Gameplay.Platformer.DoubleJumpAbility
   doubleJumpHeight: 2
-  enableTripleJump: 0
-  enableQuadrupleJump: 1
+  enableTripleJump: 1
+  enableQuadrupleJump: 0
 --- !u!1 &8338988566280778634
 GameObject:
   m_ObjectHideFlags: 0
