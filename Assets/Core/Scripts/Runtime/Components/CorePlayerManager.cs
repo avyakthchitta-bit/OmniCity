@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -26,6 +27,7 @@ namespace Blocks.Gameplay.Core
         [SerializeField] private Vector2Event onLookInput;
         [SerializeField] private GameEvent onJumpPressed;
         [SerializeField] private GameEvent onJumpReleased;
+        [SerializeField] private GameEvent onDashPressed;
         [SerializeField] private BoolEvent onSprintStateChanged;
 
         [Header("Game Events")]
@@ -168,12 +170,10 @@ namespace Blocks.Gameplay.Core
         {
             if (coreMovement == null)
             {
-                Debug.LogWarning("[Jump Debug] CoreMovement is null.");
+                Debug.LogWarning(
+                    "[Jump Debug] CoreMovement is null.");
                 return;
             }
-
-            Debug.Log(
-                $"[Jump Debug] Input received. Grounded: {coreMovement.IsGrounded}");
 
             if (!m_IsMovementInputEnabled)
             {
@@ -181,35 +181,74 @@ namespace Blocks.Gameplay.Core
                 return;
             }
 
+            // Airborne jump requests are handled by movement abilities,
+            // such as DoubleJumpAbility.
             if (!coreMovement.IsGrounded)
             {
-                Debug.Log("[Jump Debug] Rejected: not grounded.");
+                Debug.Log("[Jump Debug] Air jump requested.");
+                coreMovement.PerformJump();
                 return;
             }
 
+            // Normal ground jump: retain the stamina requirement.
             if (coreStats == null)
             {
-                Debug.LogWarning("[Jump Debug] CoreStats is null.");
+                Debug.LogWarning(
+                    "[Jump Debug] CoreStats is null.");
                 return;
             }
 
             float jumpStaminaCost =
                 coreMovement.GetAbilityStaminaCost<JumpAbility>();
 
-            Debug.Log($"[Jump Debug] Jump cost: {jumpStaminaCost}");
+            Debug.Log(
+                $"[Jump Debug] Ground jump cost: {jumpStaminaCost}");
 
             if (coreStats.TryConsumeStat(
                 StatKeys.Stamina,
                 jumpStaminaCost,
                 0))
             {
-                Debug.Log("[Jump Debug] Calling PerformJump().");
+                Debug.Log(
+                    "[Jump Debug] Ground jump requested.");
+
                 coreMovement.PerformJump();
             }
             else
             {
                 Debug.LogWarning(
                     "[Jump Debug] Stamina consumption failed.");
+            }
+        }
+
+        private void HandleDash()
+        {
+            if (!m_IsMovementInputEnabled)
+                return;
+
+            if (coreMovement == null || coreStats == null)
+            {
+                Debug.LogWarning(
+                    "[CorePlayerManager] CoreMovement or CoreStats is null in HandleDash.");
+                return;
+            }
+
+            float dashStaminaCost =
+                coreMovement.GetAbilityStaminaCost<DashAbility>();
+
+            if (coreStats.GetCurrentValue(StatKeys.Stamina) < dashStaminaCost)
+                return;
+
+            if (!coreMovement.TryActivateAbility<DashAbility>())
+                return;
+
+            if (!coreStats.TryConsumeStat(
+                StatKeys.Stamina,
+                dashStaminaCost,
+                0))
+            {
+                Debug.LogWarning(
+                    "[CorePlayerManager] Dash activated but stamina consumption failed.");
             }
         }
 
@@ -329,6 +368,12 @@ namespace Blocks.Gameplay.Core
                 onJumpReleased.RegisterListener(
                     coreMovement.OnVariableActionReleased);
 
+            if (onDashPressed == null)
+                Debug.LogWarning(
+                    "[CorePlayerManager] onDashPressed is null in RegisterEventListeners");
+            else
+                onDashPressed.RegisterListener(HandleDash);
+
             if (onSprintStateChanged == null)
                 Debug.LogWarning(
                     "[CorePlayerManager] onSprintStateChanged is null in RegisterEventListeners");
@@ -356,6 +401,9 @@ namespace Blocks.Gameplay.Core
             if (onJumpReleased != null && coreMovement != null)
                 onJumpReleased.UnregisterListener(
                     coreMovement.OnVariableActionReleased);
+
+            if (onDashPressed != null)
+                onDashPressed.UnregisterListener(HandleDash);
 
             if (onSprintStateChanged != null)
                 onSprintStateChanged.UnregisterListener(HandleSprint);
