@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Core/TestScenes/Menu.unity
     guid: 76d44fd5cc43e1e489865153629666b1
   - enabled: 1
+    path: Assets/Core/TestScenes/Credits.unity
+    guid: d5ea984ad9f395344870626c497ae5bb
+  - enabled: 1
     path: Assets/Core/TestScenes/[BB] Core.unity
     guid: 5492879da6a8a4759a6862bcc1e31e6e
   - enabled: 0
@@ -20,14 +23,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Platformer/TestScenes/[BB] Platformer MultiplayerSession.unity
     guid: 46163feafa167ab45826fb15439b5e0d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Shooter/TestScenes/[BB] Shooter.unity
     guid: ca11eb50b69e04df28644ca096307470
   - enabled: 0
     path: Assets/Shooter/TestScenes/[BB] Shooter MultiplayerSession.unity
     guid: 7d42b85864099114e8d3c5e25250b013
-  - enabled: 1
-    path: Assets/Core/TestScenes/Credits.unity
-    guid: d5ea984ad9f395344870626c497ae5bb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
