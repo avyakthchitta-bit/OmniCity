@@ -228,9 +228,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 6c452d5de6360d44abf91e7fbaab073d, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 9469c689b231e664ba0479232ef2a294, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &92400975
 GameObject:
@@ -355,9 +355,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 9bec3e2e70bc2084ba3dc5c3273b1dee, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a927d6fa3ddae9e40a56417d7b8256b2, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &95985388
 GameObject:
@@ -482,9 +482,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: c4d9680dfbd4b174f818c889ec6237e7, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 2819cb91f03bba14ea004c35110887e9, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &104882180
 GameObject:
@@ -690,9 +690,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -706,7 +706,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: c8d2072b293447246b21b4ce72c0e88c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 8cd4326cd82087c46a7c8537ca80f288, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &265428067
 GameObject:
@@ -817,9 +817,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d63258a69229ec646824250c746c8b61, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e3b4516509d8452418f74e9e792f2fde, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &292540971
 GameObject:
@@ -1071,9 +1071,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 6d448eb658a78e1439aa47e622e61de5, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: d6e632496d2e36145a1ce030c7d57488, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &345122314
 GameObject:
@@ -1198,9 +1198,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: b3b34f33f6ed5d34db0dd34de74df1b7, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: cc5610a584b0f1740bd31a52a15bb908, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &362879949
 GameObject:
@@ -1325,9 +1325,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 2b791a4316ef8d741bc47fb614f20efc, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: f7162cded10d04849b79b49b79f11582, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &422813930
 PrefabInstance:
@@ -1518,9 +1518,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 81f2a93281d3bbf49b25ef26e8b5a667, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 13555c9bed878cd408b56724609069c1, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &464166462
 GameObject:
@@ -1645,9 +1645,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1661,7 +1661,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d36d56ccce33f8849ac188b04cd727bc, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ff9c218b53b83dd499b883e42913c023, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &472454769
 GameObject:
@@ -1772,9 +1772,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1788,7 +1788,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 5b0f9bb476d0c764685574e0a6d16c04, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: f823cf1acf198af43912947af8935f21, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &481125949
 GameObject:
@@ -1899,9 +1899,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1915,7 +1915,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 9406555ebd309ba41942c07fdeac91bb, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 8c0f5d94e9f79a644a7dfba709a87f14, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &482958780
 GameObject:
@@ -2026,9 +2026,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2042,7 +2042,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 0cc039821aa0a9444bcaf80422ff7aa4, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 1bd281b19d1376e4ba7d42cc377f9b86, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &486012635
 GameObject:
@@ -2153,9 +2153,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2169,7 +2169,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: bb654b57697dd11438cc2c223aa7d675, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e55f4ff0016cf524ab69164be14a25ec, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &513384866
 GameObject:
@@ -2280,9 +2280,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2296,7 +2296,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: b32e26a06bdf4034e94181fb756fc7d8, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3603d02eb1f52f044b3586cdde91fa8f, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &516958079
 GameObject:
@@ -2407,9 +2407,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2423,7 +2423,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 3f8d2967ace3b5945847d39b31f47308, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: aba90a1b99979f747abc2e0efaa64057, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &531080727
 GameObject:
@@ -2534,9 +2534,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2550,7 +2550,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 91b89ac43e6af234bafcabef8084eef3, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 551fd8e8c33743447b63c18611bb14c2, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &619236135
 GameObject:
@@ -2661,9 +2661,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2677,7 +2677,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 8788e8fef38b2bf4982d746db65b1769, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e7d6eab7457cbf343abcc7fc0a031cc8, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &628731880
 GameObject:
@@ -2788,9 +2788,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2804,7 +2804,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: ab08e46fdd750714e9353acfc4969318, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: f08363989a94ebe45bfb482c049f1950, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &717683826
 GameObject:
@@ -2915,9 +2915,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2931,7 +2931,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 91b6f22fce0f13e43bf73e65fb344e17, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 674f21fccdeedad4885fdf267880a63b, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &821669372
 GameObject:
@@ -3042,9 +3042,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3058,7 +3058,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 92cdb4b45e832d842adb1db2b96709fb, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7786a227c95019242b82ace622651ee8, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &860308684
 GameObject:
@@ -3169,9 +3169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3185,7 +3185,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: a622903c89d5e9f47a538b0e84c12aa6, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 9a9b58f3259984049902ec9384537d6a, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &870538100
 GameObject:
@@ -3296,9 +3296,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3312,7 +3312,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 56e61a8ae89d7b24299604c02192d633, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 6e443089208c1e44986a27e131e60cdd, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &924094576
 GameObject:
@@ -3423,9 +3423,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3439,7 +3439,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 2e4af1eefdff94e43a963f0a819e763f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a1e43806df3f3114cbd9b345ff01d672, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &947761597
 PrefabInstance:
@@ -3627,9 +3627,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3643,7 +3643,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: ff5eb775faf65cd4b9eda8a79dd78980, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e32225c241decaf47b3015a711f5e7a6, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1062282004
 GameObject:
@@ -3754,9 +3754,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3770,7 +3770,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 36faaf927b73a0d47b30ee752d30fa1e, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 4f33f5a04907c994eaf1564d37e9c3c3, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1199733244
 GameObject:
@@ -3881,9 +3881,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3897,7 +3897,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: aaa84f3b3bbc33547b00c697f80f9641, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 132ebb9aff7c38b489f64e320e584428, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1217767348
 GameObject:
@@ -4008,9 +4008,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4024,7 +4024,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 1face9c261e2ea742852cb68d6ce00a1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: d62f365f531371b4ba7df6e7beb4ca54, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1298337418
 GameObject:
@@ -4135,9 +4135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4151,7 +4151,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 223440c661eb4ee4190dfe21005befc7, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: c135e4210caa9ba4e9fd1c867c0c12ef, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1314394354
 GameObject:
@@ -4432,9 +4432,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4448,7 +4448,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d6050cce7067e264aa70a3ed22fd1072, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ccb7554e2a9b0974badf7b6a1ba099f4, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1336990270
 GameObject:
@@ -4559,9 +4559,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4575,7 +4575,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 1a225018b2c19d24d94bdfa4cdbdfe7f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3402e05f023108344853554acacb0783, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1377232469
 GameObject:
@@ -4686,9 +4686,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4702,7 +4702,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 01400381b7618ea4bbf36a9cfc52a10e, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 50bdd6a8fbea3584f8a01d774c96f3ce, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &1414215049
 PrefabInstance:
@@ -4914,9 +4914,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4930,7 +4930,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 479963a198b313b4391f2682d1cf4002, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 4a8b4a1a0ddf03149b645f37fa73bae5, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1467514801
 GameObject:
@@ -5041,9 +5041,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5057,7 +5057,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: dd5f7431b2bfcc7438be27fe4967d69a, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7518dc05fa14d1b4889b51a6491d064e, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1470964379
 GameObject:
@@ -5216,9 +5216,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5232,7 +5232,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 87fe3696a128847488e4a710b60abd0a, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: c713559770d3a7d43bee01974d2a9e69, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1533933497
 GameObject:
@@ -5393,9 +5393,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5409,7 +5409,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d308c1c5f8f804241accaaa9f4ac2e1e, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: c43eeb90450e1c54e9fdd5d5de4f423c, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1574318580
 GameObject:
@@ -5520,9 +5520,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5536,7 +5536,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: bda2d03d4246ce54caa78a8fa6499ef3, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: d904d8b5edfa103469bdcee4491e1e24, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &1580467671
 PrefabInstance:
@@ -5713,9 +5713,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5729,7 +5729,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 97c36474643efcb4fbb39a9bad1930f2, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: c7cace40534ca3d4580298d4489fd85d, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1647219807
 GameObject:
@@ -5840,9 +5840,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5856,7 +5856,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 769c3573d912685429e6e9c5996e76ab, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: fb8a97b8cfba8bb43a1d47fb30e976e8, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1773413786
 GameObject:
@@ -5967,9 +5967,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5983,7 +5983,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 8c8a384faeebbba499184e42fe10febe, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: cf30a9e3f2e96d74d96e015703c96a9a, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1779656578
 GameObject:
@@ -6094,9 +6094,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6110,7 +6110,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 38bb080b7516ffe4e93e363572bdfc59, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e14945fd06034d54eaa3e64526dec69d, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1799942299
 GameObject:
@@ -6221,9 +6221,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6237,7 +6237,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: cb594ddd0321fcc4e9eaf69812a08bfe, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a2234bc920f5a074893e6a5a5436c80f, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1824628728
 GameObject:
@@ -6348,9 +6348,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6364,7 +6364,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 86c4a4a682612664c9b4e6f63d6d2b95, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 594f7876932b7194ba3d2a9668c831cc, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1914137796
 GameObject:
@@ -6475,9 +6475,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6491,7 +6491,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 6c2d8f369bb1a1e43975519ff3089e52, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 1c6cd8af52afac046963b9ec479275e8, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1939320072
 GameObject:
@@ -6667,9 +6667,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6683,7 +6683,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d0158313d5f79434c8ee3019595ff748, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ebc66fa473cfc71449550972fc6bfb95, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1950874867
 GameObject:
@@ -6794,9 +6794,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6810,7 +6810,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: f6bc5d30b1f32d149a1e072e21fd4235, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ccaa77f8f134a2447a1b4de55a9e083c, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1952893077
 GameObject:
@@ -6921,9 +6921,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6937,7 +6937,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: ba0484b0d3a0d054d857aaf274da27e1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 85f9f2385c8930042b738b2f4ee1bb82, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1990240205
 GameObject:
@@ -7127,9 +7127,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -7143,7 +7143,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 6a86d1d86fb4dc34f883928f3a2a6b43, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 263db3cad7be7104cb31fd2e48b76b00, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &2054135953
 GameObject:
@@ -7367,9 +7367,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 1000, y: 500, z: 1000}
+  m_Center: {x: 500, y: 250, z: 500}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -7383,7 +7383,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 750404f0d48cb774abd5853fd41ecda0, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 0a706a13d7f8c904584a5f60a3d47454, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &833519488704437250
 PrefabInstance:
