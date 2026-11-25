@@ -78,6 +78,7 @@ MonoBehaviour:
   Ownership: 1
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
+  <InScenePlaced>k__BackingField: 0
   ActiveSceneSynchronization: 0
   SceneMigrationSynchronization: 1
   SpawnWithObservers: 1
@@ -227,6 +228,10 @@ PrefabInstance:
     - target: {fileID: 2747241542204810001, guid: 836ad07d4e321504990b5ccb2ae9bcfe, type: 3}
       propertyPath: m_Name
       value: Pfb_Collectible
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974341969801773952, guid: 836ad07d4e321504990b5ccb2ae9bcfe, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 3190417250
       objectReference: {fileID: 0}
     - target: {fileID: 3272983384449628587, guid: 836ad07d4e321504990b5ccb2ae9bcfe, type: 3}
       propertyPath: m_LocalPosition.x

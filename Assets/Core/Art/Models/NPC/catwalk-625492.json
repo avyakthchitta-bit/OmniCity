@@ -1,0 +1,1031 @@
+{
+    "catwalk-625492": {
+        "Version": "1.10.1822.1",
+        "Scene": {
+            "Name": true,
+            "SupportShaderSelect": true
+        },
+        "Export Directory": "C:/RLConverterServices/RLConverter/TempData/ConvertWithZip/3d445a39f5413237/JIC94f4b930da0513ae8",
+        "Object": {
+            "catwalk-625492": {
+                "Generation": "ActorScan",
+                "Physics": {
+                    "Collision Shapes": {
+                        "root": {},
+                        "CC_Base_Hip": {},
+                        "CC_Base_Pelvis": {},
+                        "CC_Base_L_Thigh": {},
+                        "CC_Base_L_Calf": {},
+                        "CC_Base_L_Foot": {},
+                        "CC_Base_L_ToeBaseShareBone": {},
+                        "CC_Base_L_ToeBase": {},
+                        "CC_Base_L_PinkyToe1": {},
+                        "CC_Base_L_RingToe1": {},
+                        "CC_Base_L_MidToe1": {},
+                        "CC_Base_L_IndexToe1": {},
+                        "CC_Base_L_BigToe1": {},
+                        "CC_Base_L_CalfTwist01": {},
+                        "CC_Base_L_CalfTwist02": {},
+                        "CC_Base_L_KneeShareBone": {},
+                        "CC_Base_L_ThighTwist01": {},
+                        "CC_Base_L_ThighTwist02": {},
+                        "CC_Base_R_Thigh": {},
+                        "CC_Base_R_ThighTwist01": {},
+                        "CC_Base_R_ThighTwist02": {},
+                        "CC_Base_R_Calf": {},
+                        "CC_Base_R_Foot": {},
+                        "CC_Base_R_ToeBase": {},
+                        "CC_Base_R_PinkyToe1": {},
+                        "CC_Base_R_BigToe1": {},
+                        "CC_Base_R_IndexToe1": {},
+                        "CC_Base_R_MidToe1": {},
+                        "CC_Base_R_RingToe1": {},
+                        "CC_Base_R_ToeBaseShareBone": {},
+                        "CC_Base_R_KneeShareBone": {},
+                        "CC_Base_R_CalfTwist01": {},
+                        "CC_Base_R_CalfTwist02": {},
+                        "CC_Base_Waist": {},
+                        "CC_Base_Spine01": {},
+                        "CC_Base_Spine02": {},
+                        "CC_Base_NeckTwist01": {},
+                        "CC_Base_NeckTwist02": {},
+                        "CC_Base_Head": {},
+                        "CC_Base_FacialBone": {},
+                        "CC_Base_JawRoot": {},
+                        "CC_Base_Tongue01": {},
+                        "CC_Base_Tongue02": {},
+                        "CC_Base_Tongue03": {},
+                        "CC_Base_Teeth02": {},
+                        "CC_Base_R_Eye": {},
+                        "CC_Base_L_Eye": {},
+                        "CC_Base_UpperJaw": {},
+                        "CC_Base_Teeth01": {},
+                        "CC_Base_L_Clavicle": {},
+                        "CC_Base_L_Upperarm": {},
+                        "CC_Base_L_Forearm": {},
+                        "CC_Base_L_ForearmTwist01": {},
+                        "CC_Base_L_ForearmTwist02": {},
+                        "CC_Base_L_ElbowShareBone": {},
+                        "CC_Base_L_Hand": {},
+                        "CC_Base_L_Mid1": {},
+                        "CC_Base_L_Mid2": {},
+                        "CC_Base_L_Mid3": {},
+                        "CC_Base_L_Index1": {},
+                        "CC_Base_L_Index2": {},
+                        "CC_Base_L_Index3": {},
+                        "CC_Base_L_Ring1": {},
+                        "CC_Base_L_Ring2": {},
+                        "CC_Base_L_Ring3": {},
+                        "CC_Base_L_Pinky1": {},
+                        "CC_Base_L_Pinky2": {},
+                        "CC_Base_L_Pinky3": {},
+                        "CC_Base_L_Thumb1": {},
+                        "CC_Base_L_Thumb2": {},
+                        "CC_Base_L_Thumb3": {},
+                        "CC_Base_L_UpperarmTwist01": {},
+                        "CC_Base_L_UpperarmTwist02": {},
+                        "CC_Base_R_Clavicle": {},
+                        "CC_Base_R_Upperarm": {},
+                        "CC_Base_R_UpperarmTwist01": {},
+                        "CC_Base_R_UpperarmTwist02": {},
+                        "CC_Base_R_Forearm": {},
+                        "CC_Base_R_ForearmTwist01": {},
+                        "CC_Base_R_ForearmTwist02": {},
+                        "CC_Base_R_ElbowShareBone": {},
+                        "CC_Base_R_Hand": {},
+                        "CC_Base_R_Mid1": {},
+                        "CC_Base_R_Mid2": {},
+                        "CC_Base_R_Mid3": {},
+                        "CC_Base_R_Ring1": {},
+                        "CC_Base_R_Ring2": {},
+                        "CC_Base_R_Ring3": {},
+                        "CC_Base_R_Thumb1": {},
+                        "CC_Base_R_Thumb2": {},
+                        "CC_Base_R_Thumb3": {},
+                        "CC_Base_R_Index1": {},
+                        "CC_Base_R_Index2": {},
+                        "CC_Base_R_Index3": {},
+                        "CC_Base_R_Pinky1": {},
+                        "CC_Base_R_Pinky2": {},
+                        "CC_Base_R_Pinky3": {},
+                        "CC_Base_R_RibsTwist": {},
+                        "CC_Base_R_Breast": {},
+                        "CC_Base_L_RibsTwist": {},
+                        "CC_Base_L_Breast": {},
+                        "blue": {}
+                    }
+                },
+                "ExpressionSet": "2",
+                "Expression": {
+                    "V_None": {
+                        "Bones": {}
+                    },
+                    "V_Open": {
+                        "Bones": {
+                            "CC_Base_JawRoot": {
+                                "Translate": [
+                                    0.00003039836883544922,
+                                    4.76837158203125e-7,
+                                    -8.818460628390312e-8
+                                ],
+                                "Rotation": [
+                                    4.750836524181068e-8,
+                                    -5.1531969802454117e-8,
+                                    0.13919052481651307,
+                                    0.9902656078338623
+                                ]
+                            }
+                        }
+                    },
+                    "V_Explosive": {
+                        "Bones": {}
+                    },
+                    "V_Dental_Lip": {
+                        "Bones": {}
+                    },
+                    "V_Tight_O": {
+                        "Bones": {}
+                    },
+                    "V_Tight": {
+                        "Bones": {}
+                    },
+                    "V_Wide": {
+                        "Bones": {}
+                    },
+                    "V_Affricate": {
+                        "Bones": {}
+                    },
+                    "V_Lip_Open": {
+                        "Bones": {}
+                    },
+                    "V_Tongue_up": {
+                        "Bones": {}
+                    },
+                    "V_Tongue_Raise": {
+                        "Bones": {}
+                    },
+                    "V_Tongue_Out": {
+                        "Bones": {}
+                    },
+                    "V_Tongue_Narrow": {
+                        "Bones": {}
+                    },
+                    "V_Tongue_Lower": {
+                        "Bones": {}
+                    },
+                    "V_Tongue_Curl_U": {
+                        "Bones": {}
+                    },
+                    "V_Tongue_Curl_D": {
+                        "Bones": {}
+                    },
+                    "Brow_Raise_Inner_Left": {
+                        "Bones": {}
+                    },
+                    "Brow_Raise_Inner_Right": {
+                        "Bones": {}
+                    },
+                    "Brow_Raise_Outer_Left": {
+                        "Bones": {}
+                    },
+                    "Brow_Raise_Outer_Right": {
+                        "Bones": {}
+                    },
+                    "Brow_Drop_Left": {
+                        "Bones": {}
+                    },
+                    "Brow_Drop_Right": {
+                        "Bones": {}
+                    },
+                    "Brow_Raise_Left": {
+                        "Bones": {}
+                    },
+                    "Brow_Raise_Right": {
+                        "Bones": {}
+                    },
+                    "Eyes_Blink": {
+                        "Bones": {}
+                    },
+                    "Eye_Blink_L": {
+                        "Bones": {}
+                    },
+                    "Eye_Blink_R": {
+                        "Bones": {}
+                    },
+                    "Eye_Wide_L": {
+                        "Bones": {}
+                    },
+                    "Eye_Wide_R": {
+                        "Bones": {}
+                    },
+                    "Eye_Squint_L": {
+                        "Bones": {}
+                    },
+                    "Eye_Squint_R": {
+                        "Bones": {}
+                    },
+                    "Nose_Scrunch": {
+                        "Bones": {}
+                    },
+                    "Nose_Flanks_Raise": {
+                        "Bones": {}
+                    },
+                    "Nose_Flank_Raise_L": {
+                        "Bones": {}
+                    },
+                    "Nose_Flank_Raise_R": {
+                        "Bones": {}
+                    },
+                    "Nose_Nostrils_Flare": {
+                        "Bones": {}
+                    },
+                    "Cheek_Raise_L": {
+                        "Bones": {}
+                    },
+                    "Cheek_Raise_R": {
+                        "Bones": {}
+                    },
+                    "Cheeks_Suck": {
+                        "Bones": {}
+                    },
+                    "Cheek_Blow_L": {
+                        "Bones": {}
+                    },
+                    "Cheek_Blow_R": {
+                        "Bones": {}
+                    },
+                    "Mouth_Smile": {
+                        "Bones": {}
+                    },
+                    "Mouth_Smile_L": {
+                        "Bones": {}
+                    },
+                    "Mouth_Smile_R": {
+                        "Bones": {}
+                    },
+                    "Mouth_Frown": {
+                        "Bones": {}
+                    },
+                    "Mouth_Frown_L": {
+                        "Bones": {}
+                    },
+                    "Mouth_Frown_R": {
+                        "Bones": {}
+                    },
+                    "Mouth_Blow": {
+                        "Bones": {}
+                    },
+                    "Mouth_Pucker": {
+                        "Bones": {}
+                    },
+                    "Mouth_Pucker_Open": {
+                        "Bones": {}
+                    },
+                    "Mouth_Widen": {
+                        "Bones": {}
+                    },
+                    "Mouth_Widen_Sides": {
+                        "Bones": {}
+                    },
+                    "Mouth_Dimple_L": {
+                        "Bones": {}
+                    },
+                    "Mouth_Dimple_R": {
+                        "Bones": {}
+                    },
+                    "Mouth_Plosive": {
+                        "Bones": {}
+                    },
+                    "Mouth_Lips_Tight": {
+                        "Bones": {}
+                    },
+                    "Mouth_Lips_Tuck": {
+                        "Bones": {}
+                    },
+                    "Mouth_Lips_Open": {
+                        "Bones": {}
+                    },
+                    "Mouth_Lips_Part": {
+                        "Bones": {}
+                    },
+                    "Mouth_Bottom_Lip_Down": {
+                        "Bones": {}
+                    },
+                    "Mouth_Top_Lip_Up": {
+                        "Bones": {}
+                    },
+                    "Mouth_Top_Lip_Under": {
+                        "Bones": {}
+                    },
+                    "Mouth_Bottom_Lip_Under": {
+                        "Bones": {}
+                    },
+                    "Mouth_Snarl_Upper_L": {
+                        "Bones": {}
+                    },
+                    "Mouth_Snarl_Upper_R": {
+                        "Bones": {}
+                    },
+                    "Mouth_Snarl_Lower_L": {
+                        "Bones": {}
+                    },
+                    "Mouth_Snarl_Lower_R": {
+                        "Bones": {}
+                    },
+                    "Mouth_Bottom_Lip_Bite": {
+                        "Bones": {}
+                    },
+                    "Mouth_Down": {
+                        "Bones": {}
+                    },
+                    "Mouth_Up": {
+                        "Bones": {}
+                    },
+                    "Mouth_L": {
+                        "Bones": {}
+                    },
+                    "Mouth_R": {
+                        "Bones": {}
+                    },
+                    "Mouth_Lips_Jaw_Adjust": {
+                        "Bones": {}
+                    },
+                    "Mouth_Bottom_Lip_Trans": {
+                        "Bones": {}
+                    },
+                    "Mouth_Skewer": {
+                        "Bones": {}
+                    },
+                    "Mouth_Open": {
+                        "Bones": {
+                            "CC_Base_JawRoot": {
+                                "Translate": [
+                                    0.00003039836883544922,
+                                    4.76837158203125e-7,
+                                    -8.818460628390312e-8
+                                ],
+                                "Rotation": [
+                                    6.7037035478279e-8,
+                                    -7.439666660502553e-9,
+                                    -5.417888360170764e-13,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Head_Turn_Up": {
+                        "Bones": {
+                            "CC_Base_Head": {
+                                "Translate": [
+                                    -5.820766091346741e-11,
+                                    -0.000016927719116210939,
+                                    0.0000020265579223632814
+                                ],
+                                "Rotation": [
+                                    -1.4901161193847657e-7,
+                                    -7.645439836778678e-12,
+                                    -2.7284841053187847e-12,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Head_Turn_Down": {
+                        "Bones": {
+                            "CC_Base_Head": {
+                                "Translate": [
+                                    -5.820766091346741e-11,
+                                    -0.000016927719116210939,
+                                    0.0000020265579223632814
+                                ],
+                                "Rotation": [
+                                    -1.4901161193847657e-7,
+                                    -7.645439836778678e-12,
+                                    -2.7284841053187847e-12,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Head_Turn_L": {
+                        "Bones": {
+                            "CC_Base_Head": {
+                                "Translate": [
+                                    -5.820766091346741e-11,
+                                    -0.000016927719116210939,
+                                    0.0000020265579223632814
+                                ],
+                                "Rotation": [
+                                    -1.4901161193847657e-7,
+                                    -7.645439836778678e-12,
+                                    -2.7284841053187847e-12,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Head_Turn_R": {
+                        "Bones": {
+                            "CC_Base_Head": {
+                                "Translate": [
+                                    -5.820766091346741e-11,
+                                    -0.000016927719116210939,
+                                    0.0000020265579223632814
+                                ],
+                                "Rotation": [
+                                    -1.4901161193847657e-7,
+                                    -7.645439836778678e-12,
+                                    -2.7284841053187847e-12,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Head_Tilt_L": {
+                        "Bones": {
+                            "CC_Base_Head": {
+                                "Translate": [
+                                    -5.820766091346741e-11,
+                                    -0.000016927719116210939,
+                                    0.0000020265579223632814
+                                ],
+                                "Rotation": [
+                                    -1.4901161193847657e-7,
+                                    -7.645439836778678e-12,
+                                    -2.7284841053187847e-12,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Head_Tilt_R": {
+                        "Bones": {
+                            "CC_Base_Head": {
+                                "Translate": [
+                                    -5.820766091346741e-11,
+                                    -0.000016927719116210939,
+                                    0.0000020265579223632814
+                                ],
+                                "Rotation": [
+                                    -1.4901161193847657e-7,
+                                    -7.645439836778678e-12,
+                                    -2.7284841053187847e-12,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Turn_Jaw_Down": {
+                        "Bones": {
+                            "CC_Base_JawRoot": {
+                                "Translate": [
+                                    0.00003039836883544922,
+                                    4.76837158203125e-7,
+                                    -8.818460628390312e-8
+                                ],
+                                "Rotation": [
+                                    5.213951226323843e-8,
+                                    -5.214315024204552e-8,
+                                    -3.747446797319753e-12,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Turn_Jaw_L": {
+                        "Bones": {
+                            "CC_Base_JawRoot": {
+                                "Translate": [
+                                    0.00003039836883544922,
+                                    4.76837158203125e-7,
+                                    -8.818460628390312e-8
+                                ],
+                                "Rotation": [
+                                    6.434493116103113e-8,
+                                    -7.231938070617616e-8,
+                                    0.14782670140266419,
+                                    0.9890131950378418
+                                ]
+                            }
+                        }
+                    },
+                    "Turn_Jaw_R": {
+                        "Bones": {}
+                    },
+                    "Move_Jaw_Down": {
+                        "Bones": {}
+                    },
+                    "Move_Jaw_L": {
+                        "Bones": {
+                            "CC_Base_JawRoot": {
+                                "Translate": [
+                                    0.00003349781036376953,
+                                    -2.384185791015625e-7,
+                                    0.000001365257048746571
+                                ],
+                                "Rotation": [
+                                    1.254229573532939e-7,
+                                    -1.2579766917042435e-7,
+                                    -9.0401020003128e-12,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Move_Jaw_R": {
+                        "Bones": {
+                            "CC_Base_JawRoot": {
+                                "Translate": [
+                                    0.000015735626220703126,
+                                    0.000001430511474609375,
+                                    -0.0000016149715520441533
+                                ],
+                                "Rotation": [
+                                    9.376526577398181e-8,
+                                    -7.009657565504313e-8,
+                                    -5.039968442588361e-12,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Left_Eyeball_Look_R": {
+                        "Bones": {
+                            "CC_Base_L_Eye": {
+                                "Translate": [
+                                    0.000032901763916015628,
+                                    0.000001430511474609375,
+                                    -0.000003337860107421875
+                                ],
+                                "Rotation": [
+                                    1.3385363217821578e-7,
+                                    -1.7881393432617188e-7,
+                                    9.57106749410741e-9,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Left_Eyeball_Look_L": {
+                        "Bones": {
+                            "CC_Base_L_Eye": {
+                                "Translate": [
+                                    0.000049591064453125,
+                                    -0.0000019073486328125,
+                                    -0.0000035762786865234377
+                                ],
+                                "Rotation": [
+                                    7.861478934501065e-8,
+                                    0.0,
+                                    -4.1151224650093358e-9,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Left_Eyeball_Look_Down": {
+                        "Bones": {
+                            "CC_Base_L_Eye": {
+                                "Translate": [
+                                    0.000045299530029296878,
+                                    9.5367431640625e-7,
+                                    0.0
+                                ],
+                                "Rotation": [
+                                    6.705624855385395e-8,
+                                    0.0,
+                                    2.236208729300415e-8,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Left_Eyeball_Look_Up": {
+                        "Bones": {
+                            "CC_Base_L_Eye": {
+                                "Translate": [
+                                    0.000045299530029296878,
+                                    9.5367431640625e-7,
+                                    0.0
+                                ],
+                                "Rotation": [
+                                    6.705624855385395e-8,
+                                    0.0,
+                                    2.236208729300415e-8,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Right_Eyeball_Look_R": {
+                        "Bones": {
+                            "CC_Base_R_Eye": {
+                                "Translate": [
+                                    0.00002956390380859375,
+                                    0.0000019073486328125,
+                                    -0.0000019073486328125
+                                ],
+                                "Rotation": [
+                                    6.70554527459899e-8,
+                                    0.0,
+                                    2.236197360616643e-8,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Right_Eyeball_Look_L": {
+                        "Bones": {
+                            "CC_Base_R_Eye": {
+                                "Translate": [
+                                    0.00002956390380859375,
+                                    0.0000019073486328125,
+                                    -0.0000019073486328125
+                                ],
+                                "Rotation": [
+                                    6.70554527459899e-8,
+                                    0.0,
+                                    2.236197360616643e-8,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Right_Eyeball_Look_Down": {
+                        "Bones": {
+                            "CC_Base_R_Eye": {
+                                "Translate": [
+                                    0.00002956390380859375,
+                                    0.0000019073486328125,
+                                    -0.0000019073486328125
+                                ],
+                                "Rotation": [
+                                    6.70554527459899e-8,
+                                    0.0,
+                                    2.236197360616643e-8,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "Right_Eyeball_Look_Up": {
+                        "Bones": {
+                            "CC_Base_R_Eye": {
+                                "Translate": [
+                                    0.00002956390380859375,
+                                    0.0000019073486328125,
+                                    -0.0000019073486328125
+                                ],
+                                "Rotation": [
+                                    6.70554527459899e-8,
+                                    0.0,
+                                    2.236197360616643e-8,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "A01_Brow_Inner_Up": {
+                        "Bones": {}
+                    },
+                    "A02_Brow_Down_Left": {
+                        "Bones": {}
+                    },
+                    "A03_Brow_Down_Right": {
+                        "Bones": {}
+                    },
+                    "A04_Brow_Outer_Up_Left": {
+                        "Bones": {}
+                    },
+                    "A05_Brow_Outer_Up_Right": {
+                        "Bones": {}
+                    },
+                    "A06_Eye_Look_Up_Left": {
+                        "Bones": {}
+                    },
+                    "A07_Eye_Look_Up_Right": {
+                        "Bones": {}
+                    },
+                    "A08_Eye_Look_Down_Left": {
+                        "Bones": {}
+                    },
+                    "A09_Eye_Look_Down_Right": {
+                        "Bones": {}
+                    },
+                    "A10_Eye_Look_Out_Left": {
+                        "Bones": {}
+                    },
+                    "A11_Eye_Look_In_Left": {
+                        "Bones": {}
+                    },
+                    "A12_Eye_Look_In_Right": {
+                        "Bones": {}
+                    },
+                    "A13_Eye_Look_Out_Right": {
+                        "Bones": {}
+                    },
+                    "A14_Eye_Blink_Left": {
+                        "Bones": {}
+                    },
+                    "A15_Eye_Blink_Right": {
+                        "Bones": {}
+                    },
+                    "A16_Eye_Squint_Left": {
+                        "Bones": {}
+                    },
+                    "A17_Eye_Squint_Right": {
+                        "Bones": {}
+                    },
+                    "A18_Eye_Wide_Left": {
+                        "Bones": {}
+                    },
+                    "A19_Eye_Wide_Right": {
+                        "Bones": {}
+                    },
+                    "A20_Cheek_Puff": {
+                        "Bones": {}
+                    },
+                    "A21_Cheek_Squint_Left": {
+                        "Bones": {}
+                    },
+                    "A22_Cheek_Squint_Right": {
+                        "Bones": {}
+                    },
+                    "A23_Nose_Sneer_Left": {
+                        "Bones": {}
+                    },
+                    "A24_Nose_Sneer_Right": {
+                        "Bones": {}
+                    },
+                    "A25_Jaw_Open": {
+                        "Bones": {
+                            "CC_Base_JawRoot": {
+                                "Translate": [
+                                    0.0015870332717895508,
+                                    -0.004329204559326172,
+                                    -0.00158597226254642
+                                ],
+                                "Rotation": [
+                                    -0.000015435536624863745,
+                                    -0.00002753649459918961,
+                                    0.17367032170295716,
+                                    0.9848037958145142
+                                ]
+                            }
+                        }
+                    },
+                    "A26_Jaw_Forward": {
+                        "Bones": {
+                            "CC_Base_JawRoot": {
+                                "Translate": [
+                                    0.0015802383422851563,
+                                    0.1256709098815918,
+                                    -0.001584403682500124
+                                ],
+                                "Rotation": [
+                                    -0.000015668894775444643,
+                                    1.1319571058265865e-7,
+                                    0.00002276898521813564,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "A27_Jaw_Left": {
+                        "Bones": {
+                            "CC_Base_JawRoot": {
+                                "Translate": [
+                                    0.0015877485275268555,
+                                    -0.0043277740478515629,
+                                    -0.10158594697713852
+                                ],
+                                "Rotation": [
+                                    -0.000015668894775444643,
+                                    1.1319571058265865e-7,
+                                    0.00002276898521813564,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "A28_Jaw_Right": {
+                        "Bones": {
+                            "CC_Base_JawRoot": {
+                                "Translate": [
+                                    0.0015697479248046876,
+                                    -0.004332542419433594,
+                                    0.29841387271881106
+                                ],
+                                "Rotation": [
+                                    -0.000015668894775444643,
+                                    1.1319571058265865e-7,
+                                    0.00002276898521813564,
+                                    1.0
+                                ]
+                            }
+                        }
+                    },
+                    "A29_Mouth_Funnel": {
+                        "Bones": {}
+                    },
+                    "A30_Mouth_Pucker": {
+                        "Bones": {}
+                    },
+                    "A31_Mouth_Left": {
+                        "Bones": {}
+                    },
+                    "A32_Mouth_Right": {
+                        "Bones": {}
+                    },
+                    "A33_Mouth_Roll_Upper": {
+                        "Bones": {}
+                    },
+                    "A34_Mouth_Roll_Lower": {
+                        "Bones": {}
+                    },
+                    "A35_Mouth_Shrug_Upper": {
+                        "Bones": {}
+                    },
+                    "A36_Mouth_Shrug_Lower": {
+                        "Bones": {}
+                    },
+                    "A37_Mouth_Close": {
+                        "Bones": {}
+                    },
+                    "A38_Mouth_Smile_Left": {
+                        "Bones": {}
+                    },
+                    "A39_Mouth_Smile_Right": {
+                        "Bones": {}
+                    },
+                    "A40_Mouth_Frown_Left": {
+                        "Bones": {}
+                    },
+                    "A41_Mouth_Frown_Right": {
+                        "Bones": {}
+                    },
+                    "A42_Mouth_Dimple_Left": {
+                        "Bones": {}
+                    },
+                    "A43_Mouth_Dimple_Right": {
+                        "Bones": {}
+                    },
+                    "A44_Mouth_Upper_Up_Left": {
+                        "Bones": {}
+                    },
+                    "A45_Mouth_Upper_Up_Right": {
+                        "Bones": {}
+                    },
+                    "A46_Mouth_Lower_Down_Left": {
+                        "Bones": {}
+                    },
+                    "A47_Mouth_Lower_Down_Right": {
+                        "Bones": {}
+                    },
+                    "A48_Mouth_Press_Left": {
+                        "Bones": {}
+                    },
+                    "A49_Mouth_Press_Right": {
+                        "Bones": {}
+                    },
+                    "A50_Mouth_Stretch_Left": {
+                        "Bones": {}
+                    },
+                    "A51_Mouth_Stretch_Right": {
+                        "Bones": {}
+                    },
+                    "T10_Tongue_Bulge_Left": {
+                        "Bones": {}
+                    },
+                    "T11_Tongue_Bulge_Right": {
+                        "Bones": {}
+                    }
+                },
+                "Constraint": {},
+                "Meshes": {
+                    "blue": {
+                        "SubD Level": 0,
+                        "Materials": {
+                            "Character_Pbr": {
+                                "Material Type": "Pbr",
+                                "MultiUV Index": 0,
+                                "Two Side": true,
+                                "Diffuse Color": [
+                                    255.0,
+                                    255.0,
+                                    255.0
+                                ],
+                                "Ambient Color": [
+                                    255.0,
+                                    255.0,
+                                    255.0
+                                ],
+                                "Specular Color": [
+                                    127.5,
+                                    127.5,
+                                    127.5
+                                ],
+                                "Opacity": 1.0,
+                                "Self Illumination": 0.0,
+                                "Textures": {
+                                    "Metallic": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Base Color": {
+                                        "Texture Path": "./catwalk-625492.fbm/Character_Pbr_Diffuse.png",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Roughness": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Glow": {
+                                        "Texture Path": "./textures/catwalk-625492/catwalk-625492/blue/Character_Pbr/Character_Pbr_Glow.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Opacity": {
+                                        "Texture Path": "./catwalk-625492.fbm/Character_Pbr_Diffuse.png",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Normal": {
+                                        "Texture Path": "./catwalk-625492.fbm/Character_Pbr_Normal.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "AO": {
+                                        "Texture Path": "./textures/catwalk-625492/catwalk-625492/blue/Character_Pbr/Character_Pbr_ao.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "Resource Textures": {
+                                    "ColorID": {
+                                        "Texture Path": "./textures/catwalk-625492/catwalk-625492/blue/Character_Pbr/Character_Pbr_ResourceMap_ColorID.png"
+                                    },
+                                    "RGBMask": {
+                                        "Texture Path": "./textures/catwalk-625492/catwalk-625492/blue/Character_Pbr/Character_Pbr_ResourceMap_RGBMask.png"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
